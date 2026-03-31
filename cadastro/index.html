@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Configuração de codificação de caracteres; suporta acentos como no português (ç, ã, é) -->
+    <meta charset="UTF-8">
+    
+    <!-- Torna a página responsiva; diz ao navegador para adequar a visualização à tela do dispositivo (celular, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- O texto que vai aparecer na aba do navegador -->
+    <title>Cadastro - Sistema</title>
+    
+    <!-- Lincando o arquivo CSS central que contém o visual estilizado da nossa página -->
+    <!-- O "../" significa "volte uma pasta para trás" em relação a onde estamos agora -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- A tag <main> representa o conteúdo principal da página, onde tudo acontece -->
+    <main class="container">
+        
+        <!-- O formulário onde o usuário preencherá seus dados. A classe "auth-card" deixa ele bonito com fundo branco -->
+        <form class="auth-card">
+            
+            <!-- Título principal do cartão form -->
+            <h1>Criar Conta</h1>
+
+            <!-- Agrupamento do campo Nome -->
+            <div class="field">
+                <label for="name">Nome Completo</label>
+                <!-- Input type "text" permite qualquer caractere. Required garante que a pessoa não envie vazio -->
+                <input type="text" id="name" placeholder="Seu nome" required>
+            </div>
+
+            <!-- Agrupamento do campo E-mail -->
+            <div class="field">
+                <label for="email">E-mail</label>
+                <!-- type="email" força o navegador a exigir algo no formato de email (ex: a@b.com) -->
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+
+            <!-- Agrupamento do campo Senha -->
+            <div class="field">
+                <label for="password">Senha</label>
+                <!-- type="password" oculta os caracteres digitados (formato de bolinhas/asteriscos) -->
+                <input type="password" id="password" placeholder="Mínimo 6 caracteres" required>
+            </div>
+
+            <!-- Agrupamento do campo Confirmar Senha -->
+            <div class="field">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" placeholder="Confirme sua senha" required>
+            </div>
+
+            <!-- Botão que pega tudo e "envia" (ou executa o script do JS) quando clicado -->
+            <!-- type="submit" é o que dispara a ação do formulário -->
+            <button type="submit" class="primary-button">Cadastrar</button>
+
+            <!-- Link para voltar caso a pessoa já tenha criado conta antes -->
+            <p class="footer-text">Já é cadastrado? <a href="../login/index.html">Fazer login</a></p>
+            
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+/* 
+ * RESET CSS: Remove margens e preenchimentos padrão do navegador para que 
+ * possamos ter controle total sobre o layout, e define o box-sizing.
+ */
+* {
+    margin: 0; /* Remove a margem externa padrão de todos os elementos */
+    padding: 0; /* Remove o espaçamento interno padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem o tamanho total do elemento */
+}
+
+/* 
+ * ESTILOS DO CORPO DA PÁGINA (BODY):
+ * Aqui definimos a fonte principal, a cor de fundo e usamos Flexbox para 
+ * centralizar o conteúdo perfeitamente na tela.
+ */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Define a fonte padrão, com fallback para sans-serif */
+    background-color: #f0f2f5; /* Uma cor de fundo cinza bem clara, típica de telas de login */
+    
+    /* Configurações do Flexbox para centralização */
+    display: flex; /* Transforma o body em um contêiner flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da tela (Viewport Height) */
+}
+
+/* 
+ * CONTAINER PRINCIPAL:
+ * Define a largura máxima e adiciona um pequeno preenchimento lateral,
+ * útil principalmente em telas muito pequenas (celulares).
+ */
+.container {
+    width: 100%; /* Ocupa 100% da largura disponível (limitado pelo min-height e padding) */
+    display: flex; /* Usa flexbox para manter a consistência de layout */
+    justify-content: center; /* Garante que o cartão de autenticação fique no centro */
+    padding: 20px; /* Adiciona uma pequena margem interna para o cartão não colar na borda da tela */
+}
+
+/* 
+ * CARTÃO DE AUTENTICAÇÃO (Login/Cadastro):
+ * Esta classe é aplicada ao formulário. Cria aquele visual de "caixa branca" flutuante.
+ */
+.auth-card {
+    background: #ffffff; /* Fundo branco para destacar do fundo cinza do body */
+    width: 100%; /* O cartão tenta ocupar 100% do espaço... */
+    max-width: 400px; /* ...mas não passa de 400px de largura */
+    padding: 40px; /* Espaço bastante generoso dentro do cartão */
+    border-radius: 10px; /* Arredonda os cantos do cartão, dando um ar moderno */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Aplica uma sombra leve para criar sensação de profundidade */
+}
+
+/* 
+ * TÍTULO PRINCIPAL DO CARTÃO
+ */
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 30px; /* Dá um respiro considerável entre o título e os campos de input */
+    color: #1c1e21; /* Um cinza quase preto, mais suave que o preto puro (#000) */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* 
+ * CONTÊINER DE CADA CAMPO DO FORMULÁRIO:
+ * Envolve o rótulo (label) e a caixa de digitação (input).
+ */
+.field {
+    margin-bottom: 20px; /* Espaço entre cada campo (ex: entre Nome e Email) */
+}
+
+/* 
+ * RÓTULOS DOS CAMPOS (Labels):
+ * As palavras como "Nome", "E-mail", "Senha" que ficam em cima da caixa de texto.
+ */
+.field label {
+    display: block; /* Força o label a ocupar a linha inteira, jogando o input para baixo */
+    margin-bottom: 8px; /* Pequeno espaço entre o texto do rótulo e a caixa de digitação */
+    font-size: 14px; /* Fonte ligeiramente menor */
+    color: #4b4f56; /* Cinza médio, para não chamar mais atenção que o input em si */
+}
+
+/* 
+ * CAIXAS DE DIGITAÇÃO (Inputs):
+ */
+.field input {
+    width: 100%; /* Faz a caixa ocupar toda a largura do cartão */
+    padding: 12px; /* Garante que a caixa seja gordinha e fácil de clicar/tocar */
+    border: 1px solid #dddfe2; /* Borda cinza bem sutil */
+    border-radius: 6px; /* Cantos arredondados na caixinha */
+    font-size: 16px; /* O tamanho mínimo recomendado (16px) evita o zoom automático no celular (iOS) */
+    outline: none; /* Remove aquela borda padrão preta/azul que o navegador coloca ao clicar */
+}
+
+/* 
+ * EFEITO DE FOCO NA CAIXA DE DIGITAÇÃO:
+ * Quando o usuário clica dentro da caixa para digitar algo.
+ */
+.field input:focus {
+    border-color: #1877f2; /* Muda a cor da borda para o azul principal */
+    box-shadow: 0 0 0 2px #e7f3ff; /* Adiciona uma "aura" azul clarinha por fora da borda (efeito premium) */
+}
+
+/* 
+ * BOTÃO PRINCIPAL (Entrar / Cadastrar):
+ */
+.primary-button {
+    width: 100%; /* Botão largo, ocupando tudo */
+    padding: 12px; /* Altura confortável para toque/clique */
+    background-color: #1877f2; /* Cor de fundo azul (estilo Facebook/moderno) */
+    color: white; /* Texto branco */
+    border: none; /* Remove a borda padrão feia do botão do navegador */
+    border-radius: 6px; /* Bordas arredondadas do botão */
+    font-size: 18px; /* Texto um pouco maior para ganhar destaque */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    cursor: pointer; /* Muda a setinha do mouse para a "mãozinha" indicando que é clicável */
+    transition: background 0.2s; /* Ao passar o mouse, a mudança de cor será suave (levará 0.2 segundos) */
+}
+
+/* 
+ * EFEITO HOVER NO BOTÃO:
+ * Ocorre quando o usuário passa o mouse por cima do botão sem clicar.
+ */
+.primary-button:hover {
+    background-color: #166fe5; /* Escurece um pouco o azul, para dar o feedback visual de interação */
+}
+
+/* 
+ * RODAPÉ DO CARTÃO (Links para as outras telas)
+ */
+.footer-text {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Dá espaço acima, separando o link do botão principal */
+    font-size: 14px; /* Fonte pequena */
+    color: #606770; /* Texto cinza */
+}
+
+/* 
+ * LINKS DENTRO DO RODAPÉ (Tags <a>):
+ */
+.footer-text a {
+    color: #1877f2; /* Links também na cor azul principal do sistema */
+    text-decoration: none; /* Tira aquele sublinhado feio padrão dos links */
+}
+
+/* 
+ * EFEITO HOVER NO LINK:
+ */
+.footer-text a:hover {
+    text-decoration: underline; /* Coloca o sublinhado de volta APENAS quando o mouse passa por cima */
+}
