@@ -4,13 +4,13 @@
 <head>
     <!-- Configuração de codificação de caracteres; suporta acentos como no português (ç, ã, é) -->
     <meta charset="UTF-8">
-    
+
     <!-- Torna a página responsiva; diz ao navegador para adequar a visualização à tela do dispositivo (celular, etc.) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- O texto que vai aparecer na aba do navegador -->
     <title>Login - Sistema</title>
-    
+
     <!-- Importando o arquivo CSS central que define as cores, os botões e os espaçamentos -->
     <!-- Assim como no cadastro, usamos "../" para sair da pasta atual e acessar o arquivo raiz -->
     <link rel="stylesheet" href="../style.css">
@@ -20,13 +20,13 @@
 
     <!-- A tag <main> agrupa o bloco principal da tela (o central de login) -->
     <main class="container">
-        
+
         <!-- O formulário de login. A classe "auth-card" cuida do formato de cartão flutuante e da largura certinha -->
         <form id="form" class="auth-card">
-            
+
             <!-- Título da tela apresentado ao usuário -->
             <h1>Acessar Conta</h1>
-            
+
             <!-- Área dedicada ao campo de E-mail -->
             <div class="field">
                 <!-- O 'for="email"' liga esse rótulo diretamente ao input pelo ID, ajudando quem usa leitor de tela (acessibilidade) e também permitindo focar a caixa ao clicar na palavra -->
@@ -44,13 +44,14 @@
 
             <!-- Botão essencial. Ele aciona o fluxo de envio do form (type="submit") -->
             <button type="submit" class="primary-button">Entrar</button>
-            
+
             <!-- Texto auxiliar de rodapé para redirecionamento ao Cadastro caso o usuário seja novo -->
             <p class="footer-text">Não tem conta? <a href="../cadastro/index.html">Crie uma agora</a></p>
-            
+
         </form>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -4,8 +4,8 @@ const formulario = document.getElementById('form');
 
 // 2. Adicionamos um "ouvinte" para o evento de envio (submit)
 // Usamos a sintaxe 'function(evento)' para ser mais claro para iniciantes
-formulario.addEventListener('submit', function(evento) {
-    
+formulario.addEventListener('submit', function (evento) {
+
     // O comando abaixo impede que a página recarregue ao clicar no botão.
     // Isso é essencial para que o JavaScript consiga processar os dados.
     evento.preventDefault();
@@ -32,7 +32,7 @@ formulario.addEventListener('submit', function(evento) {
 
     // --- VALIDAÇÃO 2: Verificação de E-mail Único ---
     // O método .find() percorre a lista procurando se já existe alguém com esse e-mail.
-    const usuarioJaExiste = listaUsuarios.find(function(usuario) {
+    const usuarioJaExiste = listaUsuarios.find(function (usuario) {
         return usuario.email === emailDigitado;
     });
 
@@ -59,7 +59,7 @@ formulario.addEventListener('submit', function(evento) {
 
     // 8. Feedback final e limpeza
     alert('Cadastro realizado com sucesso!');
-    
+
     // O método .reset() limpa todos os campos do formulário automaticamente
     formulario.reset();
 });
