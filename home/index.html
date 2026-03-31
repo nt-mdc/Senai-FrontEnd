@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sistema</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Reutilizando a classe auth-card para manter o design consistente e de alta qualidade -->
+        <div class="auth-card" style="text-align: center;">
+            
+            <!-- Título que será atualizado via JavaScript -->
+            <h1 id="welcome-message">Carregando...</h1>
+            
+            <p style="margin-bottom: 30px; color: #4b4f56;">
+                Você entrou na área restrita do sistema com sucesso.
+            </p>
+
+            <!-- Botão de Sair (Logout) -->
+            <button id="logout-button" class="primary-button" style="background-color: #dc3545;">Sair</button>
+            
+        </div>
+    </main>
+
+    <!-- Importando o script responsável pela lógica da Home -->
+    <script src="script.js"></script>
+</body>
+
+</html>

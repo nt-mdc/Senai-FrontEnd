@@ -1,6 +1,6 @@
 // 1. Selecionamos o formulário de cadastro
 // O querySelector busca a primeira tag <form> que encontrar no HTML
-const formulario = document.querySelector('form');
+const formulario = document.getElementById('form');
 
 // 2. Adicionamos um "ouvinte" para o evento de envio (submit)
 // Usamos a sintaxe 'function(evento)' para ser mais claro para iniciantes
